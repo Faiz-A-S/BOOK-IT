@@ -46,9 +46,10 @@
         android:layout_marginRight="25dp"
         android:layout_marginBottom="15dp"
         android:paddingStart="20dp"
-        android:background="@color/white"
+        android:paddingEnd="20dp"
+        android:background="@drawable/rounded_text"
         android:ems="10"
-        android:gravity="center|left"
+        android:gravity="center|start"
         android:hint="@string/hint_username"
         android:minHeight="48dp" />
 
@@ -58,14 +59,26 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="30dp"
         android:paddingStart="20dp"
-        android:background="@color/white"
+        android:paddingEnd="20dp"
+        android:background="@drawable/rounded_text"
         android:ems="10"
-        android:gravity="center|left"
+        android:gravity="center|start"
         android:hint="@string/hint_password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/white"
+        android:text="Login" />
 
 </LinearLayout>
