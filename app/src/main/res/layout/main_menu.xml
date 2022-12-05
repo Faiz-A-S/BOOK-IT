@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +9,50 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_menu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/search_bar"
+        android:layout_width="413dp"
+        android:layout_height="136dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#7EB8FC"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/rv_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009">
+
+        <TextView
+            android:id="@+id/search_field"
+            android:layout_width="272.26dp"
+            android:layout_height="38.17dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded_text"
+            android:elevation="3.05dp"
+            android:text="TextView" />
+
+        <Button
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_width="60dp"
+            android:layout_height="24dp"
+            android:background="@drawable/filter_menu" />
 
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
