@@ -13,7 +13,7 @@ import java.lang.Exception
 
 class Base : AppCompatActivity() {
     private lateinit var bottomNav: BottomNavigationView
-
+    //base buat nampung fragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.base)

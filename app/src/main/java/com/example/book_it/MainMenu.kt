@@ -1,6 +1,5 @@
 package com.example.book_it
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
-import java.util.ArrayList
 
 class MainMenu: Fragment() {
     private var categoryAdapter: CategoryAdapter? = null

@@ -14,7 +14,7 @@ private const val ARG_PARAM2 = "param2"
 /**
  * A simple [Fragment] subclass.
  * Use the [Account.newInstance] factory method to
- * create an instance of this fragment.
+ * create an instance of this fragment
  */
 class Account : Fragment() {
     // TODO: Rename and change types of parameters
