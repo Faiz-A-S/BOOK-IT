@@ -17,7 +17,7 @@ class Base : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.base)
-        loadFragment(Chat())
+        loadFragment(MainMenu())
         bottomNav = findViewById(R.id.bottomNav)
         bottomNav.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item ->
             when (item.itemId) {
