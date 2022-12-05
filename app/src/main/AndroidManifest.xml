@@ -26,6 +26,7 @@
                 android:value="" />
         </activity>
         <activity android:name=".MainMenu" />
+        <activity android:name=".Base" />
     </application>
 
 </manifest>

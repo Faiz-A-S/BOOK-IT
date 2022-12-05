@@ -2,22 +2,44 @@ package com.example.book_it
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import java.util.ArrayList
 
-class MainMenu: AppCompatActivity() {
+class MainMenu: Fragment() {
     private var categoryAdapter: CategoryAdapter? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_menu)
 
-        val rvCategory = findViewById<RecyclerView>(R.id.rv_menu)
-        categoryAdapter = CategoryAdapter(this,getBook())
-        rvCategory.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+    //override fun onCreate(savedInstanceState: Bundle?) {
+        //super.onCreate(savedInstanceState)
+        //setContentView(R.layout.main_menu)
+
+        //val rvCategory = findViewById<RecyclerView>(R.id.rv_menu)
+        //categoryAdapter = CategoryAdapter(this,getBook())
+        //rvCategory.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        //rvCategory.adapter=categoryAdapter
+    //}
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.main_menu, container, false)
+    }
+
+    override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(itemView, savedInstanceState)
+        val rvCategory = itemView.findViewById<RecyclerView>(R.id.rv_menu)
+        categoryAdapter = context?.let { CategoryAdapter(it,getBook()) }
+        rvCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rvCategory.adapter=categoryAdapter
     }
+
     private fun getBook(): List<Category> {
         val listCategory = ArrayList<Category>()
         val listBook = ArrayList<Book>()
