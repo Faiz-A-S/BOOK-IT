@@ -1,6 +1,7 @@
 package com.example.book_it
 
 import android.content.Context
+import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView
 import com.example.book_it.CategoryAdapter.CategoryViewHolder
 import android.view.ViewGroup
@@ -25,6 +26,7 @@ class CategoryAdapter(private val context: Context, private val categoryList:Lis
         val bookAdapter = BookAdapter()
         bookAdapter.setData(category.listBook)
         holder.recycle_Book.adapter = bookAdapter
+
     }
 
     override fun getItemCount(): Int {

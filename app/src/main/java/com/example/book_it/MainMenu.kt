@@ -35,6 +35,7 @@ class MainMenu: Fragment() {
         categoryAdapter = context?.let { CategoryAdapter(it,getBook()) }
         rvCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rvCategory.adapter=categoryAdapter
+
     }
 
     private fun getBook(): List<Category> {
@@ -44,15 +45,33 @@ class MainMenu: Fragment() {
         listBook.add(Book(R.drawable.book2, "Book2", "11000"))
         listBook.add(Book(R.drawable.book3, "Book3", "10000"))
         listBook.add(Book(R.drawable.book4, "Book4", "9000"))
-        listCategory.add(Category("Category 1", listBook))
+        listBook.add(Book(R.drawable.book1, "Book1", "14000"))
+        listBook.add(Book(R.drawable.book2, "Book2", "11000"))
+        listBook.add(Book(R.drawable.book3, "Book3", "10000"))
+        listBook.add(Book(R.drawable.book4, "Book4", "9000"))
+        listCategory.add(Category("PKN", listBook))
 
         val listBook2 = ArrayList<Book>()
         listBook2.add(Book(R.drawable.book4, "Book4", "9000"))
         listBook2.add(Book(R.drawable.book1, "Book1", "14000"))
         listBook2.add(Book(R.drawable.book2, "Book2", "11000"))
         listBook2.add(Book(R.drawable.book3, "Book3", "10000"))
+        listBook2.add(Book(R.drawable.book1, "Book1", "14000"))
+        listBook2.add(Book(R.drawable.book2, "Book2", "11000"))
+        listBook2.add(Book(R.drawable.book3, "Book3", "10000"))
+        listBook2.add(Book(R.drawable.book4, "Book4", "9000"))
+        listCategory.add(Category("Matematika", listBook2))
 
-        listCategory.add(Category("Category 2", listBook2))
+        val listBook3 = ArrayList<Book>()
+        listBook3.add(Book(R.drawable.book3, "Book4", "9000"))
+        listBook3.add(Book(R.drawable.book1, "Book1", "14000"))
+        listBook3.add(Book(R.drawable.book2, "Book2", "11000"))
+        listBook3.add(Book(R.drawable.book4, "Book3", "10000"))
+        listBook3.add(Book(R.drawable.book1, "Book1", "14000"))
+        listBook3.add(Book(R.drawable.book2, "Book2", "11000"))
+        listBook3.add(Book(R.drawable.book3, "Book3", "10000"))
+        listBook3.add(Book(R.drawable.book4, "Book4", "9000"))
+        listCategory.add(Category("Biologi", listBook3))
 
         return listCategory
     }
