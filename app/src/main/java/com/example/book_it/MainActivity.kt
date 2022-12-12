@@ -17,11 +17,12 @@ import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var bottomNav: BottomNavigationView
-    //base buat nampung fragment
+    //mainactivvity isinya buat nampung fragment
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.base)
         loadFragment(MainMenu())
+
         bottomNav = findViewById(R.id.bottomNav)
         bottomNav.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item ->
             when (item.itemId) {

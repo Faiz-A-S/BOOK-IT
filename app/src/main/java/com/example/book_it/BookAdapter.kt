@@ -25,17 +25,17 @@ class BookAdapter : RecyclerView.Adapter<BookViewHolder>() {
         holder.book_Title.text = book.title
         holder.book_Price.text = book.price
 
-       //holder.itemView.setOnClickListener{
-       //     val intent = Intent(holder.itemView.context, BookDetail::class.java)
-       //     holder.itemView.context.startActivity(intent)
-       // }
-        holder.itemView.setOnClickListener {
-            Toast.makeText(
-                holder.itemView.context,
-                "Tombol telah berhasil diklik",
-                Toast.LENGTH_SHORT
-            ).show()
+       holder.itemView.setOnClickListener{
+            val intent = Intent(holder.itemView.context, BookDetail::class.java)
+          holder.itemView.context.startActivity(intent)
         }
+        //holder.itemView.setOnClickListener {
+         //   Toast.makeText(
+          //      holder.itemView.context,
+          //      "Tombol telah berhasil diklik",
+          //      Toast.LENGTH_SHORT
+         //   ).show()
+        //}
     }
 
     override fun getItemCount(): Int {
