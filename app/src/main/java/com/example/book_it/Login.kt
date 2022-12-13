@@ -1,10 +1,12 @@
 package com.example.book_it
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.graphics.Color
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.book_it.databinding.ActivityMainBinding
@@ -24,18 +26,18 @@ class Login : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             val email = binding.loginUsername.text.toString()
             val password = binding.loginPassword.text.toString()
-
+            val toast_text = arrayOf("Silahkan isi username dan password!","Username atau password salah.","Silahkan coba lagi.")
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     } else {
-                        Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, toast_text[2], Toast.LENGTH_SHORT).show()
                     }
                 }
             } else {
-                Toast.makeText(this, "Isi semua field", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, toast_text[1], Toast.LENGTH_SHORT).show()
             }
         }
 
