@@ -15,114 +15,133 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="134dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="25dp"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/uploadpic"
-        android:background="#eeeee4"/>
-
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="25dp"
-        android:text="Judul Buku"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/judul_buku"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/rounded_text"
-        android:ems="10"
-        android:gravity="center|start"
-        android:minHeight="48dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="25dp"
-        android:text="Harga Buku"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            <ImageButton
+                android:id="@+id/imgbuttontambah"
+                android:layout_width="134dp"
+                android:layout_height="175dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:background="#eeeee4"
+                app:srcCompat="@drawable/uploadpic" />
 
-    <EditText
-        android:id="@+id/harga_buku"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/rounded_text"
-        android:ems="10"
-        android:gravity="center|start"
-        android:minHeight="48dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="25dp"
+                android:text="Judul Buku"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="25dp"
-        android:text="Penulis Buku"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            <EditText
+                android:id="@+id/judul_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_text"
+                android:ems="10"
+                android:gravity="center|start"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
 
-    <EditText
-        android:id="@+id/penulis_buku"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/rounded_text"
-        android:ems="10"
-        android:gravity="center|start"
-        android:minHeight="48dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:text="Harga Buku"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="25dp"
-        android:text="Deskripsi"
-        android:textColor="@color/black"
-        android:textSize="16sp" />
+            <EditText
+                android:id="@+id/harga_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_text"
+                android:ems="10"
+                android:gravity="center|start"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
 
-    <EditText
-        android:id="@+id/deskripsi_buku"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/rounded_text"
-        android:ems="10"
-        android:gravity="center|start"
-        android:minHeight="48dp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:text="Penulis Buku"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/penulis_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_text"
+                android:ems="10"
+                android:gravity="center|start"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:text="Deskripsi"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/deskripsi_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/rounded_text"
+                android:ems="10"
+                android:gravity="center|start"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <Button
+                android:id="@+id/tambah_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

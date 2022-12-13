@@ -7,8 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,6 +25,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class ProfileFragment : Fragment() {
     private var categoryAdapter: CategoryAdapter? = null
+    private lateinit var auth: FirebaseAuth
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -36,6 +40,13 @@ class ProfileFragment : Fragment() {
         val tambahButton = itemView.findViewById<Button>(R.id.tambah_button)
         tambahButton.setOnClickListener{
             var intent = Intent(itemView.context, UploadBuku::class.java)
+            startActivity(intent)
+        }
+        val keluarButton = itemView.findViewById<Button>(R.id.logout)
+        keluarButton.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            Toast.makeText(itemView.context,"Bye bye...", Toast.LENGTH_SHORT).show()
+            val intent = Intent(itemView.context, Login::class.java)
             startActivity(intent)
         }
     }
