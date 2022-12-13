@@ -35,7 +35,6 @@ class MainMenu: Fragment() {
         categoryAdapter = context?.let { CategoryAdapter(it,getBook()) }
         rvCategory.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rvCategory.adapter=categoryAdapter
-
     }
 
     private fun getBook(): List<Category> {
