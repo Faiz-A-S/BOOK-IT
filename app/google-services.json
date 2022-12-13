@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "753926733853",
+    "firebase_url": "https://book-it-1ba1d-default-rtdb.firebaseio.com",
+    "project_id": "book-it-1ba1d",
+    "storage_bucket": "book-it-1ba1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753926733853:android:5fdf762526e9f6971546f4",
+        "android_client_info": {
+          "package_name": "com.example.book_it"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "753926733853-qgubpum35idjg3d99qgtfhju5msge807.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwx2yAU5wL5-f-hbz2GiPR31wUEbAWdv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "753926733853-qgubpum35idjg3d99qgtfhju5msge807.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

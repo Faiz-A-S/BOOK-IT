@@ -29,7 +29,9 @@
                 android:value="" />
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".Register" />
+        <activity
+            android:name=".Register"
+            android:exported="false"/>
         <activity android:name=".BookDetail" />
         <activity android:name=".UploadBuku"/>
     </application>
