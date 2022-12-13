@@ -3,6 +3,8 @@
     <string name="login_name">Welcome to</string>
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
+    <string name="register"><u><b>Daftar sekarang</b></u></string>
+    <string name="login"><u><b>Login sekarang</b></u></string>
 
     <string name="random_text_1">
         Hadoop is a data processing tool used to process large size data over distributed
